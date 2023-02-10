@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Cars.html">Cars</a></li>
+        <li><a href="Reservations.html">Reservations</a></li>
+        <li><a href="Payments.html">Payments</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="Payment">
+    <form name="PaymentForm">
+      <label for="car">Select a car:</label>
+      <select id="car" required>
+        <option value="" disabled selected>--Select a car--</option>
+        <option value="car1">BMW i4</option>
+        <option value="car2">Fiat 500</option>
+        <option value="car3">Hyundai Ioniq 5</option>
+        <option value="car4">Jaguar I-Pace</option>
+        <option value="car5">Kia EV 6</option>
+        <option value="car6">Mercedes-Benz EQS</option>
+        <option value="car7">Peugeote-2008</option>
+        <option value="car8">Porsche Taycan</option>
+        <option value="car9">Tesla Model 3</option>
+        <option value="car10">Volkswagen ID.4</option>
+        <option value="car11">BMW iX</option>
+        <option value="car12">Ford Mustang Mach-E</option>
+      </select>
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" required>
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" required>
+
+      <label for="end-date">Number of days:<input type="text" id="num-of-days" placeholder="0" disabled></label>
+      <label for="total-cost">Total cost for rent:<input type="text" id="total-cost" placeholder="0" disabled></label>
+
+      <label for="extra-cost">Any extra cost incurred:</label>
+      <input type="text" id="extra-cost">
+
+      <label for="final-cost">Final cost:<input type="text" id="final-cost" placeholder="0" disabled></label>
+
+      <label for="card-holder-name">Card Holder Name:</label>
+      <input type="text" id="card-holder-name" placeholder="NAME ON CARD" required>
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" placeholder="xxxx xxxx xxxx xxxx"
+        pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$" required>
+      <label for="expiration-date">Expiration Date:</label>
+      <input type="text" id="expiration-date" placeholder="MM/YY" pattern="(?:0[1-9]|1[0-2])/[0-9]{2}" required>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" placeholder="XXX" pattern="/^[0-9]{3,4}$/" required>
+      <button onclick="PaymentComplete()" id="Payment-Button">Pay now</button>
+    </form>
+  </section>
+  <footer>
+    <p>Assignment_2_WongDaoKangKeith</p>
+  </footer>
+  <script src="Payment.js"></script>
+</body>
+
+</html>
